@@ -52,7 +52,7 @@ function PillRow({ items, direction }: { items: PillItem[]; direction: 'left' | 
           <Link
             key={`${item.path}-${i}`}
             to={item.path}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 hover:scale-105 hover:shadow-md ${colorClasses[item.color] || colorClasses.emerald}`}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-[transform,box-shadow] duration-150 ease-(--ease-out-spring) hover:scale-105 hover:shadow-md ${colorClasses[item.color] || colorClasses.emerald}`}
           >
             {item.name}
           </Link>

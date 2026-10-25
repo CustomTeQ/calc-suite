@@ -9,11 +9,11 @@ interface AnimatedNumberProps {
 
 export function AnimatedNumber({
   value,
-  duration = 800,
+  duration = 250,
   formatter = (n) => Math.round(n).toLocaleString(),
   className,
 }: AnimatedNumberProps) {
   const animated = useAnimatedCounter(value, duration)
 
-  return <span className={className}>{formatter(animated)}</span>
+  return <span className={`tabular-nums ${className ?? ''}`}>{formatter(animated)}</span>
 }

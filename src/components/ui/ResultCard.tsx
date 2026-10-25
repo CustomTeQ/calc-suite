@@ -90,7 +90,7 @@ export function ResultCard({
         <input
           ref={inputRef}
           type="text"
-          className={`text-2xl font-bold ${color} bg-transparent border-b border-primary outline-none w-full`}
+          className={`text-2xl font-bold tabular-nums tracking-tight ${color} bg-transparent border-b border-primary outline-none w-full`}
           value={editText}
           onChange={(e) => setEditText(e.target.value)}
           onBlur={commitEdit}
@@ -98,13 +98,13 @@ export function ResultCard({
         />
       ) : editable ? (
         <p
-          className={`text-2xl font-bold ${color} cursor-pointer`}
+          className={`text-2xl font-bold tabular-nums tracking-tight ${color} cursor-pointer`}
           onClick={handleValueClick}
         >
           {value}
         </p>
       ) : (
-        <p className={`text-2xl font-bold ${color}`}>{value}</p>
+        <p className={`text-2xl font-bold tabular-nums tracking-tight ${color}`}>{value}</p>
       )}
 
       {subtitle && (

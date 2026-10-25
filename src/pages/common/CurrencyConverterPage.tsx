@@ -93,7 +93,7 @@ export default function CurrencyConverterPage() {
         <div className="flex justify-center mt-4">
           <button
             onClick={handleSwap}
-            className="p-3 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-all duration-200 font-medium text-lg hover:scale-110 active:scale-95"
+            className="p-3 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600 transition-[background-color,transform] duration-150 ease-(--ease-out-spring) font-medium text-lg hover:scale-110 active:scale-95"
             title="Swap currencies"
           >
             ↔

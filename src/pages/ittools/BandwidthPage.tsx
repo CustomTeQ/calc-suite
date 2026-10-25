@@ -154,7 +154,7 @@ export default function BandwidthPage() {
             <button
               key={file.name}
               onClick={() => handleFileClick(file)}
-              className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-amber-50 dark:hover:bg-amber-900/20 border border-transparent hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-200 text-left cursor-pointer animate-slide-up hover:scale-[1.02] active:scale-[0.98]"
+              className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/50 hover:bg-amber-50 dark:hover:bg-amber-900/20 border border-transparent hover:border-amber-300 dark:hover:border-amber-700 transition-[background-color,border-color,transform] duration-150 ease-out text-left cursor-pointer animate-slide-up hover:scale-[1.02] active:scale-[0.98]"
               style={{ animationDelay: `${i * 0.04}s`, animationFillMode: 'both' }}
             >
               <span className="text-2xl block mb-1">{file.icon}</span>

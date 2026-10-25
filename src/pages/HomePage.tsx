@@ -74,7 +74,7 @@ export default function HomePage() {
               className="group block animate-slide-up"
               style={{ animationDelay: `${index * 0.06}s`, animationFillMode: 'both' }}
             >
-              <div className={`relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border-l-4 ${colors.border} shadow-md hover:shadow-xl hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 p-5`}>
+              <div className={`relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border-l-4 ${colors.border} shadow-md hover:shadow-xl hover:-translate-y-1 active:scale-[0.98] transition-[transform,box-shadow] duration-200 ease-(--ease-out-spring) p-5`}>
                 {/* Background decoration */}
                 <div className={`absolute -top-6 -right-6 w-28 h-28 bg-gradient-to-br ${colors.gradient} opacity-[0.07] rounded-full group-hover:scale-[2] transition-transform duration-700`} />
                 <div className={`absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br ${colors.gradient} opacity-[0.05] rounded-full group-hover:scale-[2.5] transition-transform duration-700 delay-100`} />
@@ -111,7 +111,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Arrow indicator */}
-                <div className="absolute top-5 right-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                <div className="absolute top-5 right-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-[opacity,transform] duration-200 ease-out">
                   <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
