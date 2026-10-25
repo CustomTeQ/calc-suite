@@ -140,7 +140,7 @@ export default function PasswordGeneratorPage() {
               <button
                 key={t.label}
                 onClick={() => handleToggle(t.setter, t.enabled)}
-                className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors duration-150 ${
                   t.enabled
                     ? 'bg-amber-500 text-white shadow-md'
                     : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'
@@ -156,7 +156,7 @@ export default function PasswordGeneratorPage() {
         <div className="mt-6 flex justify-center">
           <button
             onClick={generatePasswords}
-            className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-medium transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+            className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-medium transition-[background-color,transform] duration-150 ease-(--ease-out-spring) hover:scale-105 active:scale-95 shadow-lg"
           >
             Generate
           </button>
@@ -219,8 +219,8 @@ export default function PasswordGeneratorPage() {
           </div>
           <div className="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
             <div
-              className={`h-full rounded-full transition-all duration-500 ${strength.color}`}
-              style={{ width: `${strength.percent}%` }}
+              className={`h-full w-full rounded-full transition-[transform,background-color] duration-250 ease-(--ease-out-spring) ${strength.color}`}
+              style={{ transform: `translateX(${strength.percent - 100}%)` }}
             />
           </div>
         </div>

@@ -152,7 +152,7 @@ export default function DebtToIncomePage() {
           <span>43%</span>
           <span>100%</span>
         </div>
-        <div className="w-full h-4 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden relative">
+        <div className="@container w-full h-4 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden relative">
           {/* Zone markers */}
           <div className="absolute inset-0 flex">
             <div className="bg-emerald-200 dark:bg-emerald-900/50" style={{ width: '36%' }} />
@@ -161,8 +161,8 @@ export default function DebtToIncomePage() {
           </div>
           {/* Indicator */}
           <div
-            className={`absolute top-0 h-full w-1.5 rounded-full ${results.barColor} shadow-md transition-all duration-300`}
-            style={{ left: `${Math.min(results.ratio, 100)}%` }}
+            className={`absolute top-0 left-0 h-full w-1.5 rounded-full ${results.barColor} shadow-md transition-[transform,background-color] duration-250 ease-(--ease-out-spring)`}
+            style={{ transform: `translateX(${Math.min(results.ratio, 100)}cqw)` }}
           />
         </div>
         <div className="mt-3 flex gap-4 text-xs text-slate-500 dark:text-slate-400">

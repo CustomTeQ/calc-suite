@@ -61,7 +61,7 @@ export function DrawerNav({ isOpen, onClose }: DrawerNavProps) {
     <div className="lg:hidden">
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-250 ease-out ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={onClose}
@@ -70,7 +70,7 @@ export function DrawerNav({ isOpen, onClose }: DrawerNavProps) {
 
       {/* Drawer panel */}
       <nav
-        className={`fixed top-0 left-0 z-50 w-72 h-full bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-300 ease-out safe-top ${
+        className={`fixed top-0 left-0 z-50 w-72 h-full bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-250 ease-(--ease-out-spring) safe-top ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         aria-label="Category navigation"
@@ -99,7 +99,7 @@ export function DrawerNav({ isOpen, onClose }: DrawerNavProps) {
               key={category.id}
               to={`/${category.id}`}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-5 py-3.5 mx-2 rounded-xl transition-all duration-150 ${
+                `flex items-center gap-3 px-5 py-3.5 mx-2 rounded-xl transition-colors duration-150 ${
                   isActive
                     ? 'bg-primary/10 text-primary font-medium'
                     : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'

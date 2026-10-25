@@ -178,7 +178,7 @@ export default function BaseConverterPage() {
               <button
                 key={i}
                 onClick={() => toggleBit(i)}
-                className={`w-12 h-12 rounded-lg text-lg font-bold font-mono border-2 transition-all duration-150 cursor-pointer hover:scale-105 active:scale-95 ${
+                className={`w-12 h-12 rounded-lg text-lg font-bold font-mono border-2 transition-[background-color,border-color,color,transform] duration-150 ease-out cursor-pointer hover:scale-105 active:scale-95 ${
                   bit
                     ? i < 4
                       ? 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 border-amber-400 dark:border-amber-600'

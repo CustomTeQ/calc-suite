@@ -150,7 +150,7 @@ export default function BMIPage() {
           BMI Scale
         </h3>
 
-        <div className="relative mb-8">
+        <div className="@container relative mb-8">
           {/* Scale bar */}
           <div className="flex h-6 rounded-full overflow-hidden">
             <div className="bg-blue-500 flex-1" title="Underweight" />
@@ -161,8 +161,8 @@ export default function BMIPage() {
 
           {/* Position indicator */}
           <div
-            className="absolute -top-2 transition-all duration-300"
-            style={{ left: `${bmiPosition}%`, transform: 'translateX(-50%)' }}
+            className="absolute -top-2 left-0 transition-transform duration-250 ease-(--ease-out-spring)"
+            style={{ transform: `translateX(calc(${bmiPosition}cqw - 50%))` }}
           >
             <div className="w-0 h-0 border-l-[8px] border-r-[8px] border-t-[10px] border-l-transparent border-r-transparent border-t-slate-900 dark:border-t-white" />
           </div>

@@ -28,7 +28,7 @@ export function GlassCard({ children, className = '', hover = false, accent }: G
 
   return (
     <div
-      className={`relative bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/50 rounded-2xl shadow-md ${hover ? 'hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.99] transition-all duration-300' : ''} ${className}`}
+      className={`relative bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/50 rounded-2xl shadow-md ${hover ? 'hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.99] transition-[transform,box-shadow] duration-200 ease-(--ease-out-spring)' : ''} ${className}`}
     >
       {resolvedAccent && accentMap[resolvedAccent] && (
         <div className={`absolute left-0 top-0 bottom-0 w-1 ${accentMap[resolvedAccent]} rounded-l-2xl`} />
